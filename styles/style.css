@@ -6,10 +6,11 @@ body {
   
   .banner {
     background: #a770ef;
-    background: -webkit-linear-gradient(to right, #a770ef, #cf8bf3, #fdb99b);
-    background: linear-gradient(to right, #a770ef, #cf8bf3, #fdb99b);
+    background: -webkit-linear-gradient(to right, #e25098, #ffff00);
+    background: linear-gradient(to right, #e25098, #ffff00);
   }
   a {
     color: whitesmoke !important;
+    text-decoration: underline !important;
 
   }
