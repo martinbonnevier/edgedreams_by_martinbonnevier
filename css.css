@@ -1,15 +1,23 @@
-
 body {
     background-color: #e25098;
 }
+
 .card {
     margin-top: 10px;
     margin-bottom: 30px;
+    border: whitesmoke;
+    border-style: solid;
+    border-width: 10px;
 }
+
 .banner {
-background: #a770ef;
-background: -webkit-linear-gradient(to right, #e25098, #ffff00);
-background: linear-gradient(to right, #e25098, #ffff00);
+    margin-top: 20px;
+    background: #a770ef;
+    background: -webkit-linear-gradient(to right, #79a6e5ff, #ecdc10ff);
+    background: linear-gradient(to right, #79a6e5ff, #ecdc10ff);
+    border: whitesmoke;
+    border-style: solid;
+    border-width: 10px;
 }
 
 
@@ -20,14 +28,14 @@ background: linear-gradient(to right, #e25098, #ffff00);
 #gallery {
     column-count: 4;
     column-gap: 10px;
-  }
-  
-  #gallery img {
+}
+
+#gallery img {
     width: 100%;
     display: block;
     margin-bottom: 10px;
     break-inside: avoid;
-  }
+}
 
 /* Apply grayscale filter only for non-touch devices with a fine pointer, assumed to be desktops */
 @media (hover: hover) and (pointer: fine) {
@@ -35,8 +43,8 @@ background: linear-gradient(to right, #e25098, #ffff00);
         filter: grayscale(100%);
         transition: filter 0.3s ease;
     }
-  
+
     #gallery img:hover {
         filter: grayscale(0);
     }
-  }
+}
