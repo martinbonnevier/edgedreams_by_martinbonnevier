@@ -1,5 +1,6 @@
 body {
     background-color: #e25098;
+    font-family: 'moms_typewriter', sans-serif; /* Use it as the first option */
 }
 
 .card {
@@ -49,3 +50,15 @@ body {
         filter: grayscale(0);
     }
 }
+
+@font-face {
+    font-family: 'moms_typewriter'; /* Give your font a name */
+    src: url('./font/Mom«t___.ttf') format('truetype'); /* Path to your .ttf file */
+  }
+  .alternate-font {
+    font-family: Arial, sans-serif; /* Fallback to sans-serif if Arial is not available */
+  }
+  
+  a {
+    color: #e25098;
+  }
