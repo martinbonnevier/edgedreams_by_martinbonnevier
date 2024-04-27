@@ -1,16 +1,92 @@
-
-
 body {
-    background: #e25098 !important;
-  }
-  
-  .banner {
-    background: #a770ef;
-    background: -webkit-linear-gradient(to right, #e25098, #ffff00);
-    background: linear-gradient(to right, #e25098, #ffff00);
-  }
-  a {
-    color: whitesmoke !important;
-    text-decoration: underline !important;
+  background: #e25098 !important;
+}
 
+.banner {
+  background: #a770ef;
+  background: -webkit-linear-gradient(to right, #e25098, #ffff00);
+  background: linear-gradient(to right, #e25098, #ffff00);
+}
+
+a {
+  color: whitesmoke !important;
+  text-decoration: underline !important;
+
+}
+
+
+#toTopButton {
+  display: none;
+}
+
+@media only screen and (max-width: 1000px) {
+  #toTopButton {
+    display: block;
   }
+}
+
+
+
+/* Custom styles here */
+.carousel-item img {
+  /* max-height: 500px; */
+  /* Adjust as needed */
+  scale: 0.5;
+  margin: auto;
+}
+
+/* Further custom styling can be added here */
+body {
+  background-color: #e25098;
+  /* Adjust to match the color in your sketch */
+  color: #333;
+  /* Change text color as needed */
+  font-family: 'Arial', sans-serif;
+  /* Use any font that matches your design */
+}
+
+h1,
+p {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.container {
+  background-color: #e25098;
+  /* Adjust to match the color in your sketch */
+  padding: 2rem;
+  border-radius: 25px;
+  /* Rounded corners if needed */
+}
+
+.carousel {
+  margin-bottom: 2rem;
+}
+
+/* Cards */
+.row>.col-md-4 {
+  background: #FAE1DD;
+  /* Background color */
+  padding: 1rem;
+  border-radius: 10px;
+  /* Rounded corners for the cards */
+  margin-top: 2rem;
+  /* Space between the text and cards */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Optional: Adds a shadow to the cards */
+  height: 200px;
+  /* Adjust based on your content */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Card titles */
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #222;
+  /* Card title text color */
+}
+
+/* The rest of your custom styles */

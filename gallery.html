@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="./css.css">
+</head>
+<body>
+    <div id="gallery"></div>
+
+    <script>
+    async function loadImages() {
+        try {
+            const response = await fetch('images.json');
+            const data = await response.json();
+    
+            const gallery = document.getElementById('gallery');
+            data.images.forEach(imageSrc => {
+                const img = document.createElement('img');
+                img.src = imageSrc;
+                img.alt = "Gallery image";
+                img.onclick = () => enlargeImage(imageSrc);
+                gallery.appendChild(img);
+            });
+        } catch (error) {
+            console.error('Failed to load images:', error);
+        }
+    }
+    
+    function enlargeImage(src) {
+        const modal = document.createElement('div');
+        modal.style.position = 'fixed';
+        modal.style.top = '0';
+        modal.style.left = '0';
+        modal.style.width = '100vw';
+        modal.style.height = '100vh';
+        modal.style.background = 'rgba(0, 0, 0, 0.8)';
+        modal.style.display = 'flex';
+        modal.style.justifyContent = 'center';
+        modal.style.alignItems = 'center';
+        modal.style.cursor = 'pointer';
+    
+        const img = document.createElement('img');
+        img.src = src;
+        img.style.maxHeight = '90vh';
+        img.style.maxWidth = '90vw';
+    
+        modal.appendChild(img);
+        modal.onclick = () => document.body.removeChild(modal);
+    
+        document.body.appendChild(modal);
+    }
+    
+    window.onload = loadImages;
+    </script>
+</body>
+</html>

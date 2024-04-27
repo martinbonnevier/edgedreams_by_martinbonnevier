@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Martin's Webpage</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #e25098;
+        }
+        .card {
+            margin-top: 20px;
+        }
+        .banner {
+  background: #a770ef;
+  background: -webkit-linear-gradient(to right, #e25098, #ffff00);
+  background: linear-gradient(to right, #e25098, #ffff00);
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Banner with Name -->
+        <div class="jumbotron text-center banner">
+            <h1>Martin Bonnevier</h1>
+            <p>Welcome to my personal webpage!</p>
+        </div>
+
+        <!-- Cards Row -->
+        <div class="row">
+            <!-- Left Card with Image and Text -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Image">
+                    <div class="card-body">
+                        <p class="card-text">This is a sample text under an image in the left card.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Middle Card with Image and Button -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img id="randomImage" src="https://via.placeholder.com/150" class="card-img-top" alt="Image">
+                    <div class="card-body">
+                        <button class="btn btn-primary" onclick="changeImage()">Change Image</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Card with Image and Text -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Image">
+                    <div class="card-body">
+                        <p class="card-text">This is some more sample text under another image in the right card.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- JavaScript to change the image -->
+    <script>
+        function changeImage() {
+            const images = [
+                'https://via.placeholder.com/150/0000FF/808080 ?Text=Digital.com',
+                'https://via.placeholder.com/150/FF0000/FFFFFF?Text=Down.com',
+                'https://via.placeholder.com/150/FFFF00/000000?Text=WebsiteBuilders.com'
+            ];
+            document.getElementById('randomImage').src = images[Math.floor(Math.random() * images.length)];
+        }
+    </script>
+</body>
+</html>

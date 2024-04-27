@@ -1,78 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"> -->
-       
-    <title>Edgedreams by Martin Bonnevier</title>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
-    crossorigin="anonymous"></script>
+    <title>Martin's Webpage</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css.css">
 </head>
-
 <body>
-    <div class="container-fluid">
-        <div class="px-lg-5">
-
-
-            <div class="row py-5">
-                <div class="col-lg-12 mx-auto">
-                    <div class="text-white p-5 shadow-sm rounded banner">
-                        <h1 class="display-4">Edgedreams by Martin Bonnevier</h1>
-                        <p class="lead">IG: <a href="https://instagram.com/edgedreams_by_martinbonnevier">More weirdness
-                                here!</a></p>
-
+    <div class="container">
+        <!-- Banner with Name -->
+        <div class="jumbotron text-center banner">
+            <img src="./images/graphics/banner.png" alt="bannertext" id="bannergraphics">
+            <a href="https://www.instagram.com/edgedreams_by_martinbonnevier" target="_blank"><img src="./images/graphics/iglink.png" alt="ig-link" id="bannergraphics"></a>
+        </div>
+        <p class="text-center"><a href="./gallery.html" target="_blank" ><img src="./images/graphics/gallery.png" id="bannergraphics" alt="gallery"></a></p>
+        <!-- Cards Row -->
+        <div class="row">
+            <!-- Left Card with Image and Text -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="./images/3352068622008397033_61312353922.jpg" class="card-img-top" alt="Image">
+                    <div class="card-body">
+                        <p class="card-text">contact: <a href="mailto: martin@martinbonnevier.de">martin@martinbonnevier.de</a></p>
+                        <p class="card-text">IG: <a href="https://www.instagram.com/edgedreams_by_martinbonnevier" target="_blank">edgereams</a></p>
                     </div>
                 </div>
             </div>
-            <!-- End -->
 
-            <div class="row" id="gallery">
-              
+            <!-- Middle Card with Image and Button -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img id="randomImage" src="./images/3354269528601320801_61312353922.jpg" class="card-img-top" alt="Image">
 
+                </div>
             </div>
-            <div class="py-5 text-right"><a href="#" class="btn btn-dark px-5 py-3 text-uppercase">to top <i class="fa-solid fa-arrow-up"></i></a>
+
+            <!-- Right Card with Image and Text -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="./images/3353505349990127868_61312353922.jpg" class="card-img-top" alt="Image" >
+                    <div class="card-body">
+                        <p class="card-text">Feel free to reach out with any questions or if you're interested in purchasing prints.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26Lr3DDIhOQ4C+7g4mcpDzlv3fVD8Vp9nKW27Jj" crossorigin="anonymous"></script> -->
 
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- JavaScript to change the image -->
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-  fetch('gallery.json')
-    .then(response => response.json())
-    .then(data => {
-      let galleryContainer = document.getElementById('gallery'); // Your gallery container ID
-      data.forEach(item => {
-        let divCol = document.createElement('div');
-        divCol.className = 'col-xl-3 col-lg-4 col-md-6 mb-4';
-        divCol.innerHTML = `
-          <div class="bg-white rounded shadow-sm">
-            <img src="${item.src}" alt="" class="img-fluid card-img-top">
-            <div class="p-4">
-              <h5> <a href="#" class="text-dark">${item.title}</a></h5>
-              <p class="small text-muted mb-0">${item.description}</p>
-              <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
-                <p class="small mb-0"><i class="fa fa-picture-o mr-2"></i><span class="font-weight-bold">${item.format}</span></p>
-                <div class="badge badge-success px-3 rounded-pill font-weight-normal">${item.tag}</div>
-              </div>
-            </div>
-          </div>
-        `;
-        galleryContainer.appendChild(divCol);
-      });
-    });
-});
-    </script>
-    <script src="https://kit.fontawesome.com/fc02340b56.js" crossorigin="anonymous"></script>
-</body>
 
+
+    async function loadImages() {
+        try {
+
+            const response = await fetch('images.json');
+            const data = await response.json();
+            const images = data.images;
+
+
+            setInterval(() => {
+                const randomIndex = Math.floor(Math.random() * images.length);
+                document.getElementById('randomImage').src = images[randomIndex];
+            }, 5000); 
+        } catch (error) {
+            console.error('Failed to load images:', error);
+        }
+    }
+
+    // Call loadImages when the page loads
+    window.onload = loadImages;
+</script>
+
+
+    
+</body>
 </html>

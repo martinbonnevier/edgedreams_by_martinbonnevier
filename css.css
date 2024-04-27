@@ -1,0 +1,33 @@
+
+body {
+    background-color: #e25098;
+}
+.card {
+    margin-top: 20px;
+}
+.banner {
+background: #a770ef;
+background: -webkit-linear-gradient(to right, #e25098, #ffff00);
+background: linear-gradient(to right, #e25098, #ffff00);
+}
+
+
+#bannergraphics {
+    width: 90%;
+}
+
+#gallery {
+    column-count: 4;
+    column-gap: 10px;
+  }
+  
+  #gallery img {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    break-inside: avoid;
+  }
+
+#gallery img:hover {
+    transform: scale(1.05);
+}

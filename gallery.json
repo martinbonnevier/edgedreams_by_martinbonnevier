@@ -6,13 +6,7 @@
         "format": "PNG",
         "tag": "jupp2"
     },
-    {
-        "src": "images/RAFT3_hatt3_jupp3.png",
-        "title": "RAFT3",
-        "description": "hatt3",
-        "format": "PNG",
-        "tag": "jupp3"
-    },
+
     {
         "src": "images/RAFT_hatt_jupp.png",
         "title": "RAFT",
