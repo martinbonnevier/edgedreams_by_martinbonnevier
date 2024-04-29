@@ -1,3 +1,9 @@
+#spotify-container{
+    margin-bottom: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
 body {
     background-color: #e25098;
     font-family: 'moms_typewriter', sans-serif; /* Use it as the first option */
