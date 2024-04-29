@@ -67,5 +67,5 @@ body {
     color: #e25098;
   }
 #alt_font{
-font-family: alt_typewriter;
+font-family: alt_typewriter !important;
 }
