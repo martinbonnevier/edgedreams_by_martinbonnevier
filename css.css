@@ -43,7 +43,13 @@ body {
     margin-bottom: 10px;
     break-inside: avoid;
 }
-
+@media screen and (max-width: 800px) {
+    iframe{
+        margin-bottom: 30px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
 /* Apply grayscale filter only for non-touch devices with a fine pointer, assumed to be desktops */
 @media (hover: hover) and (pointer: fine) {
     #gallery img {
