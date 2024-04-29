@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,20 +11,23 @@
 
 
     <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 </head>
+
 <body>
     <div class="container">
         <!-- Banner with Name -->
         <div class="jumbotron text-center banner">
             <img src="./images/graphics/banner.png" alt="bannertext" id="bannergraphics">
-            <a href="https://www.instagram.com/edgedreams_by_martinbonnevier" target="_blank"><img src="./images/graphics/iglink.png" alt="ig-link" id="bannergraphics"></a>
+            <a href="https://www.instagram.com/edgedreams_by_martinbonnevier" target="_blank"><img
+                    src="./images/graphics/iglink.png" alt="ig-link" id="bannergraphics"></a>
         </div>
-        <p class="text-center"><a href="./gallery.html" target="_blank" ><img src="./images/graphics/gallery.png" id="bannergraphics" alt="gallery"></a></p>
-        
-      
+        <p class="text-center"><a href="./gallery.html" target="_blank"><img src="./images/graphics/gallery.png"
+                    id="bannergraphics" alt="gallery"></a></p>
+
+
         <!-- Cards Row -->
         <div class="row">
             <!-- Left Card with Image and Text -->
@@ -31,8 +35,11 @@
                 <div class="card">
                     <img src="./images/3352068622008397033_61312353922.jpg" class="card-img-top" alt="Image">
                     <div class="card-body">
-                        <p class="card-text">contact<span class="alternate-font"><b>:</b></span> <a href="mailto: martin@martinbonnevier.de">martin<span id="alt_font">@</span>martinbonnevier.de</a></p>
-                        <p class="card-text">IG: <a href="https://www.instagram.com/edgedreams_by_martinbonnevier" target="_blank">edgedreams</a></p>
+                        <p class="card-text">contact<span class="alternate-font"><b>:</b></span> <a
+                                href="mailto: martin@martinbonnevier.de">martin<span
+                                    id="alt_font">@</span>martinbonnevier.de</a></p>
+                        <p class="card-text">IG: <a href="https://www.instagram.com/edgedreams_by_martinbonnevier"
+                                target="_blank">edgedreams</a></p>
                     </div>
                 </div>
             </div>
@@ -40,7 +47,8 @@
             <!-- Middle Card with Image and Button -->
             <div class="col-md-4">
                 <div class="card">
-                    <img id="randomImage" src="./images/3354269528601320801_61312353922.jpg" class="card-img-top" alt="Image">
+                    <img id="randomImage" src="./images/3354269528601320801_61312353922.jpg" class="card-img-top"
+                        alt="Image">
 
                 </div>
             </div>
@@ -48,14 +56,19 @@
             <!-- Right Card with Image and Text -->
             <div class="col-md-4">
                 <div class="card">
-                    <img src="./images/3353505349990127868_61312353922.jpg" class="card-img-top" alt="Image" >
+                    <img src="./images/3353505349990127868_61312353922.jpg" class="card-img-top" alt="Image">
                     <div class="card-body">
-                        <p class="card-text">Feel free to reach out with any questions or if you're interested in purchasing prints.</p>
+                        <p class="card-text">Feel free to reach out with any questions or if you're interested in
+                            purchasing prints.</p>
                     </div>
                 </div>
             </div>
 
-              <iframe style="border-radius:12px;" src="https://open.spotify.com/embed/artist/0mFCIRIdFqJRwCCUYPs1j4?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <iframe style="border-radius:12px;"
+                src="https://open.spotify.com/embed/artist/0mFCIRIdFqJRwCCUYPs1j4?utm_source=generator&theme=0"
+                width="100%" height="152" frameBorder="0" allowfullscreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"></iframe>
 
         </div>
     </div>
@@ -69,28 +82,29 @@
     <script>
 
 
-    async function loadImages() {
-        try {
+        async function loadImages() {
+            try {
 
-            const response = await fetch('images.json');
-            const data = await response.json();
-            const images = data.images;
+                const response = await fetch('images.json');
+                const data = await response.json();
+                const images = data.images;
 
 
-            setInterval(() => {
-                const randomIndex = Math.floor(Math.random() * images.length);
-                document.getElementById('randomImage').src = images[randomIndex];
-            }, 5000); 
-        } catch (error) {
-            console.error('Failed to load images:', error);
+                setInterval(() => {
+                    const randomIndex = Math.floor(Math.random() * images.length);
+                    document.getElementById('randomImage').src = images[randomIndex];
+                }, 5000);
+            } catch (error) {
+                console.error('Failed to load images:', error);
+            }
         }
-    }
 
-    // Call loadImages when the page loads
-    window.onload = loadImages;
-</script>
+        // Call loadImages when the page loads
+        window.onload = loadImages;
+    </script>
 
 
-    
+
 </body>
+
 </html>
