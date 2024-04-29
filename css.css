@@ -50,7 +50,11 @@ body {
         filter: grayscale(0);
     }
 }
-
+@font-face {
+    font-family: 'alt_typewriter'; /* Give your font a name */
+    src: url('./font/OldNewspaperTypes.ttf') format('truetype'); /* Path to your .ttf file */
+  }
+    
 @font-face {
     font-family: 'moms_typewriter'; /* Give your font a name */
     src: url('./font/Mom«t___.ttf') format('truetype'); /* Path to your .ttf file */
